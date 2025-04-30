@@ -1,0 +1,17 @@
+
+.login-bg, .signup-bg {
+    background-color: #5f9ea0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    max-width: 400px;
+    height: 500px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+}
