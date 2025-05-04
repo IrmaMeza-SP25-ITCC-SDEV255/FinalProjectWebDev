@@ -1,4 +1,5 @@
 
+/* Login & sign up pages */
 .login-bg, .signup-bg {
     background-color: #5f9ea0;
     display: flex;
@@ -14,4 +15,19 @@
     width: 100%;
     border-radius: 8px;
     padding: 20px;
+}
+
+
+/* */
+.navbar {
+    background-color: #5f9ea0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    font-size: 30px;
+    padding-top: 15px;
 }
