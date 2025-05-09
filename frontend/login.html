@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in or sign up</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="scripst/login"></script>
+    <script src="../scripts/login.js"></script>
 </head>
 <body class="login-bg">
     <!--form container-->
     <section class="container">
     <form class="login-form">
-        <header>Student Login</header>
+        <header class="headers">Login</header>
         <div class="form-group">
-          <label for="uname">Username</label>
-          <input type="text" class="form-control" id="uname" placeholder="Username">
+          <label class = "form-labels" for="username">Username</label>
+          <input type="text" class="form-input" id="username">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label class = "form-labels" for="password">Password</label>
+          <input type="password" class="form-input" id="password">
         </div>
-        <button type="button" id="loginBtn" class="btn btn-primary">SIGN IN</button>
-        <button onclick="document.location = 'teacherlogin.html'" type="button" class="btn btn-primary">FACULTY SIGN IN</button> 
+        <button type="button" id="studentLoginBtn" class="loginBtn">STUDENT LOGIN</button>
+        <button type="button" id="teacherLoginBtn" class="loginBtn">FACULTY LOGIN</button> 
         <p>Need an account? <a href="signup.html"> Sign up</a></p>
       </form>
     </section>
+    <p id="errorMsg"></p>
     
 </body>
 </html>

@@ -1,16 +1,22 @@
 let token;
-window.onload() = function () {
-    document.querySelector("#loginBtn").addEventListener("click", function() {
+window.onload = function () {
+    document.querySelector("#studentLoginBtn").addEventListener("click", function () {
         const username = document.querySelector("#username").value
         const password = document.querySelector("#password").value
-        login(username, password)
+        login(username, password, "student")
+    });
+    document.querySelector("#teacherLoginBtn").addEventListener("click", function () {
+        const username = document.querySelector("#username").value
+        const password = document.querySelector("#password").value
+        login(username, password, "teacher")
     })
 }
 
-async function login(username, password) {
+async function login(username, password, role) {
     const login_info = {
         username,
-        password
+        password,
+        role
     }
     const response = await fetch("http://localhost:3000/api/auth/", {
         method: "POST",
@@ -19,19 +25,25 @@ async function login(username, password) {
         },
         body: JSON.stringify(login_info)
     })
+
     if (response.ok) {
         const tokenResponse = await response.json()
         token = tokenResponse.token
-        uname = tokenResponse.username2
-        auth = tokenResponse.auth
+        const uname = tokenResponse.username
+        const auth = tokenResponse.auth
 
         localStorage.setItem("token", token)
         localStorage.setItem("uname", uname)
         localStorage.setItem("auth", auth)
 
-        window.location.replace("/index.html")
+        if (role === "teacher") {
+            window.location.replace("./index.html")
+        }
+        else if (role === "student") {
+            window.location.replace("./student_courses.html");
+        }
     }
     else {
-        document.querySelector("errorMsg".innerHTML = "Bad username and password")
+        document.querySelector("#errorMsg".innerHTML = "Bad username and password")
     }
 }

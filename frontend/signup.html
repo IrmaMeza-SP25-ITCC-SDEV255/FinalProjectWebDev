@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts/signup.js"></script>
+
+
 </head>
 <body class="signup-bg">
     <!--form container-->
-    <section class="container">
+    <section class="signup-container">
         <form class="signup-form">
-          <label for="fname">Enter Your First Name</label>
-          <input type="text" id="fname" name="fname" placeholder="First Name">
-          <label for="lname">Enter Your Last Name</label>
-          <input type="text" id="lname" name="lname" placeholder="Last Name">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email Address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+          <header class="headers">Sign Up</header>
+          <label class = "su-form-labels" for="fname">First Name</label>
+          <input class="su-form-input" type="text" id="fname" name="fname">
+          <label class = "su-form-labels" for="lname">Last Name</label>
+          <input class="su-form-input" type="text" id="lname" name="lname">
+            <div class="su-form-group">
+              <label class = "su-form-labels" for="username">Username</label>
+              <input class="su-form-input" type="text" id="username" aria-describedby="emailHelp">
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <div class="su-form-group">
+              <label class = "su-form-labels" for="password">Password</label>
+              <input class="su-form-input" type="password"  id="password">
             </div>
-            <input type="radio" name="signup" id="rad1" value="teacher">
+            <input type="radio" name="role" id="rad1" value="teacher">
             <label for="rad1">Teacher</label>
-            <input type="radio" name="signup" id="rad2" value="student">
+            <input type="radio" name="role" id="rad2" value="student">
             <label for="rad2">Student</label>
-            <button type="submit" class="btn btn-primary">SIGN UP</button>
+            <div class="su-btn">
+              <button type="submit"  id="signupBtn" class="signupBtn">SIGN UP</button>
+            </div>
           </form>
         </section>
     

@@ -16,6 +16,70 @@
     border-radius: 8px;
     padding: 20px;
 }
+.headers {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 70px;
+    padding-top: 20px;
+}
+
+.form-labels {
+    font-size: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 30px;
+}
+
+.form-input {
+    padding: 13px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 5px;
+
+}
+
+.loginBtn {
+    padding: 12px;
+    color: black;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.signup-container {
+    background-color: white;
+    max-width: 400px;
+    height: 600px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+}
+.su-form-input {
+    padding: 13px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.su-form-labels {
+    font-size: 18px;
+}
+.signupBtn {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 12px;
+    background-color: white;
+}
 
 
 /* */
