@@ -3,35 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add New Course</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="/scripts/add_course.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <ul>
-            <ul><a href="index.html">Courses</a></ul>
-            <ul><a href="add_course.html">New Course</a></ul>
-            <ul><a href="login.html">Log out</a></ul>
-            <ul><a href="edit_course.html">Edit Course</a></ul>
+            <li><a href="index.html">Courses</a></li>
+            <li><a href="add_course.html">New Course</a></li>
+            <li><a href="login.html">Log out</a></li>
         </ul>
     </nav>
-    <header>Add a Course</header>
+    <header class="add_course_header">Add a Course</header>
     <form class="add_course_form">
         <div>
-          <label for="courseName">Course Name</label>
+          <label class="add_course_label" for="courseName">Course Name</label>
           <input type="text" id="courseName">
         </div>
         <div>
-          <label for="description">Description</label>
+          <label class="add_course_label"  for="description">Description</label>
           <input type="text" id="description">
         </div>
         <div>
-          <label for="subject">Subject</label>
+          <label class="add_course_label"  for="subject">Subject</label>
           <input type="text" id="subject">
         </div>
         <div>
-            <label for="credits">Credits</label>
+            <label class="add_course_label"  for="credits">Credits</label>
             <input type="number" id="credits">
           </div>
         <input type="button" id="addBtn" value="Add">

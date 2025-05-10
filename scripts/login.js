@@ -36,6 +36,10 @@ async function login(username, password, role) {
         localStorage.setItem("uname", uname)
         localStorage.setItem("auth", auth)
 
+        if (role === "student" && tokenResponse.userId) {
+            localStorage.setItem("studentId", tokenResponse.studentId)
+        }
+
         if (role === "teacher") {
             window.location.replace("./index.html")
         }
@@ -44,6 +48,6 @@ async function login(username, password, role) {
         }
     }
     else {
-        document.querySelector("#errorMsg".innerHTML = "Bad username and password")
+        document.querySelector("#errorMsg").innerHTML = "Bad username and password"
     }
 }
